@@ -1,1 +1,3 @@
-# eslint-config-rik
+# eslint-config
+
+My eslint config.
