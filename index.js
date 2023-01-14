@@ -3,37 +3,6 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
-  overrides: [],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-  plugins: ["react", "@typescript-eslint"],
-  rules: {
-    "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-restricted-imports": [
-      "warn",
-      {
-        name: "react-redux",
-        importNames: ["useSelector", "useDispatch"],
-        message: "Use typed hooks `useAppDispatch` and `useAppSelector` instead.",
-      },
-    ],
-  },
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
-}
-module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -67,7 +36,8 @@ module.exports = {
       {
         name: "react-redux",
         importNames: ["useSelector", "useDispatch"],
-        message: "Use typed hooks `useAppDispatch` and `useAppSelector` instead.",
+        message:
+          "Use typed hooks `useAppDispatch` and `useAppSelector` instead.",
       },
     ],
 
@@ -125,7 +95,10 @@ module.exports = {
     "react/jsx-pascal-case": "error",
     "react/self-closing-comp": "error",
     "react/iframe-missing-sandbox": "error",
-    "react/jsx-key": ["error", { checkFragmentShorthand: true, warnOnDuplicates: true }],
+    "react/jsx-key": [
+      "error",
+      { checkFragmentShorthand: true, warnOnDuplicates: true },
+    ],
 
     // Lodash
     "lodash/prefer-lodash-method": "off",
@@ -165,4 +138,4 @@ module.exports = {
       typescript: true,
     },
   },
-}
+};
