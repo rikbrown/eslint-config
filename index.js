@@ -7,7 +7,6 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:radar/recommended",
     "plugin:array-func/all",
   ],
   overrides: [],
@@ -19,10 +18,8 @@ module.exports = {
   plugins: [
     "react",
     "@typescript-eslint",
-    "lodash",
     "react-hooks",
     "array-func",
-    "radar",
     "simple-import-sort",
     "unused-imports",
   ],
@@ -31,16 +28,6 @@ module.exports = {
     eqeqeq: ["error", "smart"],
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-restricted-imports": [
-      "warn",
-      {
-        name: "react-redux",
-        importNames: ["useSelector", "useDispatch"],
-        message:
-          "Use typed hooks `useAppDispatch` and `useAppSelector` instead.",
-      },
-    ],
-
     "simple-import-sort/imports": [
       "error",
       {
@@ -100,35 +87,8 @@ module.exports = {
       { checkFragmentShorthand: true, warnOnDuplicates: true },
     ],
 
-    // Lodash
-    "lodash/prefer-lodash-method": "off",
-    "lodash/collection-method-value": "error",
-    "lodash/collection-return": "error",
-    "lodash/no-extra-args": "error",
-    "lodash/chaining": ["error", "always"],
-    "lodash/import-scope": ["error", "full"],
-    "lodash/identity-shorthand": ["error", "never"],
-    "lodash/matches-shorthand": ["error", "never"],
-    "lodash/matches-prop-shorthand": ["error", "never"],
-    "lodash/prop-shorthand": ["error", "never"],
-    "lodash/prefer-compact": "error",
-    "lodash/prefer-filter": "error",
-    "lodash/prefer-find": "error",
-    "lodash/prefer-flat-map": "error",
-    "lodash/prefer-immutable-method": "error",
-    "lodash/prefer-map": "error",
-    "lodash/prefer-reject": "error",
-    "lodash/prefer-times": "error",
-    "lodash/preferred-alias": "error",
-
     // Array-func
     "array-func/prefer-array-from": "off",
-
-    // Radar
-    "radar/cognitive-complexity": "off",
-    "radar/no-small-switch": "off",
-    "radar/no-duplicate-string": "off",
-    "radar/prefer-immediate-return": "off",
   },
   settings: {
     react: {
