@@ -22,6 +22,7 @@ module.exports = {
     "array-func",
     "simple-import-sort",
     "unused-imports",
+    "react-refresh",
   ],
   rules: {
     "react/no-unescaped-entities": "off",
@@ -89,6 +90,8 @@ module.exports = {
 
     // Array-func
     "array-func/prefer-array-from": "off",
+
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
   },
   settings: {
     react: {
